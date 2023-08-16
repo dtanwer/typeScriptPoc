@@ -4,10 +4,11 @@ type propsType={
 }
 
 const OptinalProps=(props:propsType)=> {
+  const {age=10,name}=props
   return (
     <div>
-        name : {props.name} <br />
-        age : {props.age}
+        name : {name} <br />
+        age : {age}
     </div>
   )
 }

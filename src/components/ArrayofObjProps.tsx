@@ -9,7 +9,7 @@ const ArrayofObjProps=({users}:propsType)=> {
         {
             users.map((item,i)=>{
                 return(
-                    <p> name : {item.name}  {item.from} {item.phone}</p>
+                    <p key={i}> name : {item.name}  {item.from} {item.phone}</p>
                 )
             })
         }

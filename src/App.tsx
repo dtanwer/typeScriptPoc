@@ -2,14 +2,19 @@ import './App.css';
 import Private from './auth/Private';
 import Pro from './auth/Pro';
 import ArrayofObjProps from './components/ArrayofObjProps';
+import Button from './components/Button';
 import EventProps from './components/EventProps';
+import ExtractingCompProps from './components/ExtractingCompProps';
+import GenericProps from './components/GenericProps';
 import Heading from './components/Heading';
+import LimitedProps from './components/LimitedProps';
 import OptinalProps from './components/OptinalProps';
 import PremmitiveProps from './components/PremmitiveProps';
 import ReactCompAsProps from './components/ReactCompAsProps';
 import States from './components/States';
 import StatusProps from './components/StatusProps';
 import StyleProps from './components/StyleProps';
+import Tost from './components/Tost';
 import UseReducer from './components/UseReducer';
 import Box from './context/Box';
 import { ThemeContextProvider } from './context/ThemeContext';
@@ -70,6 +75,11 @@ function App() {
       <MutableRef/>
       
       <Private  componet={Pro} isLogin={true}/>
+      <GenericProps items={[1,2,3]} onClick={(v)=>console.log(v)} />
+      <LimitedProps value={5} isPositive />
+      <Tost position="center"/>
+      <Button varient="primary" onClick={()=>console.log('clicked')}>This is button</Button>
+      <ExtractingCompProps name="Deepak" age={1223}/>
     </div>
   );
 }

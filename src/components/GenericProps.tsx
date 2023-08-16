@@ -2,14 +2,15 @@ type ListProps<T>={
     items:T[],
     onClick:(value:T)=>void
 }
-const GenericProps=<T extends  {}>({items,onClick}:ListProps<T>)=> {
+const GenericProps=<T extends number>({items,onClick}:ListProps<T>)=> {
   return (
     <div>
         {
-            items.map((item)=>{
+            items.map((item,i)=>{
+                // console.log(item)
                 return(
-                    <div>
-                        {/* {item} */}
+                    <div onClick={()=>onClick(item)} key={i}>
+                        {item}
                     </div>
                 )
             })
